@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# passwords, usernames, and api-keys
+mongodb_credentials.txt
