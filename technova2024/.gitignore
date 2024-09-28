@@ -36,4 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 # passwords, usernames, and api-keys
-mongodb_credentials.txt
+.env
+/src/pages/api/secret.js

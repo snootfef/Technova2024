@@ -1,7 +1,13 @@
+require('dotenv').config();
+
 const { MongoClient } = require("mongodb");
 
+
 // Replace the uri string with your connection string.
-const uri = "mongodb+srv://saliu1229:wW9YgBTPpl9HPqlI@technova2024.wvwop.mongodb.net/?retryWrites=true&w=majority&appName=TechNova2024";
+const { user, pass} = require('./secret.js')
+
+
+const uri = "mongodb+srv://"+user+":"+pass+"@technova2024.wvwop.mongodb.net/?retryWrites=true&w=majority&appName=TechNova2024";
 
 const client = new MongoClient(uri);
 
@@ -22,30 +28,10 @@ async function run() {
     const users = database1.collection("users");
 
     //query for steph
-    const query = {username: "ellobello"};
-    const user = await movies.findOne(query);
+    var query = {username: "ellobello"};
+    var user = await users.findOne(query);
 
     console.log(user);
-
-        
-    await createMovie(client,
-        {
-        title: "despicable me 4",
-        directors: ["maggie"]
-        
-        }
-    );
-
-    const database = client.db('sample_mflix');
-    const movies = database.collection('movies');
-
-    // // Query for a movie that has the title 'Back to the Future'
-    // const query = { title: 'Back to the Future' };
-    // const movie = await movies.findOne(query);
-
-
-    console.log(movie);
-
 
   } finally {
     // Ensures that the client will close when you finish/error
@@ -56,10 +42,6 @@ async function run() {
 
 run().catch(console.dir);
 
-async function createMovie(client, newMovie){
-    const result = await client.db("sample_mflix").collection("movies").insertOne(newMovie);
-    console.log(`New movie created with the following id: ${result.insertedId}`);
-}
 
 async function createUser(client, newUser){
   const result = await client.db("technova").collection("users").insertOne(newUser);
