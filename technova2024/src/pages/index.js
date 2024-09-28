@@ -19,13 +19,13 @@ export default function Home() {
         <div
           className='relative w-[55vw] h-full flex justify-center items-center bg-no-repeat bg-contain'
           style={{
-            backgroundImage: "url('/assets/kitchenBg.png')",
+            backgroundImage: "url('/assets/kitchen/kitchenBg.png')",
             backgroundPosition: "center",
             backgroundSize: "75%"
           }}
         >
           <Image
-            src="/assets/fridge1.png"
+            src="/assets/kitchen/fridge.png"
             className='absolute top-[12.7rem] left-[30.5rem] furniture'
             width="100"
             height="100"
