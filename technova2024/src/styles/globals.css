@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,4 +36,43 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.gradient {
+  background: linear-gradient(-45deg, #971199, #dd2ab6, #7520c0);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.name {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.furniture:hover {
+  scale: 130%;
+  transition-timing-function: ease-in-out;
+  transition-duration: 100ms;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
 }
