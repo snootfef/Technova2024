@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&display=swap');
 
 /* Chrome, Safari and Opera */
 ::-webkit-scrollbar {
@@ -39,9 +40,9 @@ body {
 }
 
 .gradient {
-  background: linear-gradient(-45deg, #971199, #dd2ab6, #7520c0);
+  background: linear-gradient(-45deg, #122794, #8c67ca, #de67e1, #f192a9);
   background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 8s ease infinite;
   height: 100%;
 }
 
@@ -59,9 +60,7 @@ body {
   }
 }
 
-.navText {
-  padding: 0px 20px;
-}
+.navText {}
 
 .name {
   font-size: x-large;
