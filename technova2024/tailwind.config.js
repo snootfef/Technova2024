@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'magenta': '#971199',
+        'fuschia': '#dd2a7b'
       },
     },
   },
