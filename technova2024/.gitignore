@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# passwords, usernames, and api-keys
+.env
+/src/pages/api/secret.js
