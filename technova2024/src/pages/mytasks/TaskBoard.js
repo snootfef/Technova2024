@@ -1,12 +1,8 @@
-import Nav from '../nav'
-import TaskCard from './TaskCard';
-import Background from '../background';
 import { useDrop } from "react-dnd";
-import { useState } from 'react';
 import React from 'react';
 import { COLUMN_NAMES } from '../../tasks';
 
-const TaskBoard = ({ children, className, title }) => {
+const TaskBoard = ({ children, colour, title }) => {
    const [{ isOver, canDrop }, drop] = useDrop({
       accept: "Our first type",
       drop: () => ({ name: title }),
@@ -39,10 +35,11 @@ const TaskBoard = ({ children, className, title }) => {
    return (
       <main
          ref={drop}
-         className="taskBoard flex flex-col column font-sans"
+         className="w-[33vw] min-h-[400px] h-max mx-2 flex flex-col justify-start flex-wrap column font-sans"
       >
          <p
-            className='px-1.5 py-1 text-md w-fit h-fit bg-light-pink rounded-md'
+            className={'px-1.5 py-1 text-sm w-fit h-fit rounded-md font-semibold'}
+            style={{ backgroundColor: colour }}
          >{title}</p>
          {children}
       </main>

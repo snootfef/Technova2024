@@ -162,13 +162,13 @@ export default function TaskView({ furniture, onClose }) {
             <div className="grid grid-cols-2 gap-3">
                {/* Map through the tasks and render the Task component for each */}
                {tasks.map((task, index) => (
-                  <Task 
-                     key={index} 
-                     taskName={task.taskName} 
-                     assignee={task.assignee} 
+                  <Task
+                     key={index}
+                     taskName={task.taskName}
+                     assignee={task.assignee}
                      // deadline={task.deadline} // Format the 
                      deadline={format(new Date(task.deadline), 'MMMM dd, yyyy')} // Format the deadline as a string
-                     status={task.status} 
+                     status={task.status}
                   />
                ))}
                <div

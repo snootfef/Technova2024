@@ -55,15 +55,15 @@ const Home = () => {
             <Background />
             <Nav />
             <div
-               className='relative flex flex-row mx-20 mt-3'
+               className='relative flex flex-row mx-20 mt-4'
             >
-               <TaskBoard title={DO_IT} className="column">
+               <TaskBoard title={DO_IT} colour="#4b5fc9">
                   {returnItemsForColumn(DO_IT)}
                </TaskBoard>
-               <TaskBoard title={IN_PROGRESS} className="column">
+               <TaskBoard title={IN_PROGRESS} colour="#8c67ca">
                   {returnItemsForColumn(IN_PROGRESS)}
                </TaskBoard>
-               <TaskBoard title={DONE} className="column">
+               <TaskBoard title={DONE} colour="#de67e1">
                   {returnItemsForColumn(DONE)}
                </TaskBoard>
             </div>
