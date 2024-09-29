@@ -81,6 +81,7 @@ export default function Home({user_data}) {
                <HousemateCard 
                   key={user._id} // Use a unique identifier for the key
                   name={user.displayName} // Adjust if the property name is different
+                  percentage={user.percentage}
                />
             ))}
          </div>

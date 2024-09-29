@@ -1,6 +1,26 @@
 import Task from "./Task"
 import { HiPlus } from "react-icons/hi";
 import { useRef, useEffect } from "react";
+import { MongoClient } from 'mongodb';
+
+// pass in database credentials
+require('dotenv').config();
+const { user, pass } = require('./secret.js')
+
+// initialize client
+const uri = "mongodb+srv://" + user + ":" + pass + "@technova2024.wvwop.mongodb.net/?retryWrites=true&w=majority&appName=TechNova2024";
+const client = new MongoClient(uri);
+
+export async function getServerSideProps({ furniture }) {
+   await client.connect();
+
+   const database = client.db("technova");
+   const tasks = database.collection("tasks");
+
+   //query for furniture
+   var query = { furniture: { furniture } };
+   var house = await houses.findOne(query);
+}
 
 export default function TaskView({ furniture, onClose }) {
    const modalRef = useRef(null);
