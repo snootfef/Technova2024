@@ -15,11 +15,13 @@ export async function getServerSideProps({furniture}) {
    await client.connect();
 
    const database = client.db("technova");
-   const tasks = database.collection("tasks");
+   const tasks_db = database.collection("tasks");
 
     //query for furniture
     var query = {furniture: {furniture}};
-    var house = await houses.findOne(query);
+    var tasks = await tasks_db.find(query).toArray();
+
+    console.log(tasks);
 }
 
 export default function TaskView({ furniture, onClose }) {
