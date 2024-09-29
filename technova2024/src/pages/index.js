@@ -6,7 +6,6 @@ import Background from './background';
 import TaskView from './TaskView';
 import { useState } from 'react';
 
-import { AuthProvider } from "@propelauth/react";
 
 export default function Home() {
   const [room, setRoom] = useState(0);
