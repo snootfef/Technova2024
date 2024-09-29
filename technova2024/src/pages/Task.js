@@ -1,4 +1,15 @@
 import Image from "next/image"
+import {MongoClient} from 'mongodb';
+
+// pass in database credentials
+require('dotenv').config();
+const { user, pass} = require('./secret.js')
+
+// initialize client
+const uri = "mongodb+srv://"+user+":"+pass+"@technova2024.wvwop.mongodb.net/?retryWrites=true&w=majority&appName=TechNova2024";
+const client = new MongoClient(uri);
+
+
 
 export default function Task({ taskName, assignee, recurrance, deadline, status }) {
    return (
