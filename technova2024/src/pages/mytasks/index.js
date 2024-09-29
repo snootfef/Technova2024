@@ -4,7 +4,7 @@ import TaskBoard from './TaskBoard';
 import Background from '../background';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { tasks } from '../../tasks';
 import { COLUMN_NAMES } from '../../tasks';
 

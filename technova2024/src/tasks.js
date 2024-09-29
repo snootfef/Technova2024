@@ -6,8 +6,8 @@ export const COLUMN_NAMES = {
 
 const { DO_IT, IN_PROGRESS, DONE } = COLUMN_NAMES;
 export const tasks = [
-   { id: 1, name: 'Item 1', column: DO_IT },
-   { id: 2, name: 'Item 2', column: DO_IT },
-   { id: 3, name: 'Item 3', column: IN_PROGRESS },
-   { id: 4, name: 'Item 4', column: DONE },
+   { id: 1, name: 'Wash dishes', column: DO_IT },
+   { id: 2, name: 'Make ice', column: DO_IT },
+   { id: 3, name: 'Buy milk', column: IN_PROGRESS },
+   { id: 4, name: 'Clean fridge', column: DONE },
 ];
