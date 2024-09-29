@@ -81,7 +81,7 @@ export default function Home({user_data}) {
             {Object.values(user_data).map((user, index) => (
                <HousemateCard 
                   key={user._id} // Use a unique identifier for the key
-                  name={user.username} // Adjust if the property name is different
+                  name={user.displayName} // Adjust if the property name is different
                />
             ))}
          </div>
