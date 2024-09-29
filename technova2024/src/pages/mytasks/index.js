@@ -7,8 +7,6 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import { useState, useRef } from 'react';
 import { tasks } from '../../tasks';
 import { COLUMN_NAMES } from '../../tasks';
-import { MongoClient } from 'mongodb';
-
 
 const Home = () => {
    const [items, setItems] = useState(tasks);
