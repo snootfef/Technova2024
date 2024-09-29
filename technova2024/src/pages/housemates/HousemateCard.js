@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function HousemateCard({name}) {
+export default function HousemateCard({name, percentage}) {
    console.log(name);
 
    return (
