@@ -33,26 +33,25 @@ export async function getServerSideProps() {
 
       //query for roommate
       query = {username: roommates[i]}
-      var user = await users.findOne(user);
+      var user = await users.findOne(query);
+
       console.log(user);
       i++;
    }
 
    client.close();
 
+   const data = {text: "hello"};
+
    return {
-     props: {house}, // Pass the fetched data as props
+      props: {
+         data
+      } // Pass the fetched data as props
    };
 
 }
 
 export default function Home() {
-
-   useEffect(() => {
-      getServerSideProps();
-
-   })
-
    return (
       <main className="relative flex flex-col w-screen h-screen no-scrollbar justify-center items-center">
          <Background />
