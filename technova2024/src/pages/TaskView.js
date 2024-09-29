@@ -10,8 +10,9 @@ const { user, pass } = require('./secret.js')
 // initialize client
 const uri = "mongodb+srv://" + user + ":" + pass + "@technova2024.wvwop.mongodb.net/?retryWrites=true&w=majority&appName=TechNova2024";
 const client = new MongoClient(uri);
-
+console.log("hi");
 export async function getServerSideProps({ furniture }) {
+   console.log("helloooo");
    await client.connect();
 
    const database = client.db("technova");
