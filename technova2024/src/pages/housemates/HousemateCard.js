@@ -1,6 +1,7 @@
 import Image from "next/image"
 
-export default function HousemateCard() {
+export default function HousemateCard({name}) {
+   console.log(name);
 
    return (
       <main
@@ -15,16 +16,13 @@ export default function HousemateCard() {
             />
          </section>
          <div
-            className="mx-4 flex flex-col"
+            className="mx-4 flex flex-col w-full h-full"
          >
             <h2
-               className="name"
+               className="text-xl text-black"
             >
-               *Name
+               {name}
             </h2>
-            <p>
-               (437)555 0000
-            </p>
          </div>
       </main >
    )
