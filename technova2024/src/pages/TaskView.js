@@ -99,6 +99,7 @@ import Task from "./Task"; // Import your Task component
 import { HiPlus } from "react-icons/hi";
 import { useRef, useEffect, useState } from "react";
 import { format } from 'date-fns'; // Importing format from date-fns
+import TaskLogger from "./TaskLogger";
 
 
 export default function TaskView({ furniture, onClose }) {
@@ -156,7 +157,7 @@ export default function TaskView({ furniture, onClose }) {
                e.stopPropagation(); // Prevent closing the modal when clicking inside
             }}
          >
-            <h2 className="text-gray-700 font-bold my-2 text-2xl">
+            <h2 className="text-white font-bold mt-1 mb-4 text-2xl">
                {furniture}
             </h2>
             <div className="grid grid-cols-2 gap-3">
@@ -171,11 +172,7 @@ export default function TaskView({ furniture, onClose }) {
                      status={task.status}
                   />
                ))}
-               <div
-                  className="hover:bg-opacity-50 duration-150 ease-in-out border-2 flex justify-center items-center relative bg-white bg-opacity-30 w-[13.5vw] h-[16vh] rounded-md border-solid"
-               >
-                  <HiPlus className="text-4xl" />
-               </div>
+               <TaskLogger />
             </div>
          </div>
       </main>

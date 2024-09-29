@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import {AuthProvider} from "@propelauth/react";
+import { AuthProvider } from "@propelauth/react";
 
 
 export default function App({ Component, pageProps }) {
