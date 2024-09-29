@@ -2,12 +2,13 @@ import Nav from '../nav'
 import TaskCard from './TaskCard';
 import TaskBoard from './TaskBoard';
 import Background from '../background';
-import { useDrop } from "react-dnd";
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { useState, useRef } from 'react';
 import { tasks } from '../../tasks';
 import { COLUMN_NAMES } from '../../tasks';
+import { MongoClient } from 'mongodb';
+
 
 const Home = () => {
    const [items, setItems] = useState(tasks);
