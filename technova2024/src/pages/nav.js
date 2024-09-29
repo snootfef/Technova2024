@@ -31,7 +31,7 @@ export default function Nav() {
             </Link>
          </div>
          <a
-            className={'flex justify-center items-center relative z-50 ease-in-out transition-all duration-150 w-[8.5vw] h-[5.5vh] text-center rounded-lg ' + (pathname == '/' ? 'bg-white text-magenta mx-4' : 'text-white mx-1 hover:scale-110')}
+            className={'flex justify-center items-center relative z-50 ease-in-out transition-all duration-150 w-fit mx-6 h-[5.5vh] text-center rounded-lg ' + (pathname == '/' ? 'bg-white text-magenta p-3.5' : 'text-white hover:scale-110')}
             href="/"
          >
             <p
@@ -41,7 +41,7 @@ export default function Nav() {
             </p>
          </a>
          <a
-            className={'flex justify-center items-center relative z-50 ease-in-out transition-all duration-150 w-[8.5vw] h-[5.5vh] text-center rounded-lg ' + (pathname == '/housemates' ? 'bg-white text-magenta mx-3' : 'text-white mx-1 hover:scale-110')}
+            className={'flex justify-center items-center relative z-50 ease-in-out transition-all duration-150 w-fit h-[5.5vh] text-center rounded-lg mx-6 ' + (pathname == '/housemates' ? 'bg-white text-magenta p-3.5' : 'text-white hover:scale-110')}
             href='/housemates'
          >
             <p
@@ -51,7 +51,7 @@ export default function Nav() {
             </p>
          </a>
          <a
-            className={'flex justify-center items-center relative z-50 ease-in-out transition-all duration-150 w-[8.5vw] h-[5.5vh] text-center rounded-lg ' + (pathname == '/mytasks' ? 'bg-white text-magenta mx-3' : 'text-white mx-1 hover:scale-110')}
+            className={'flex justify-center items-center relative z-50 ease-in-out transition-all duration-150 w-fit h-[5.5vh] text-center rounded-lg mx-6 ' + (pathname == '/mytasks' ? 'bg-white text-magenta p-3.5' : 'text-white hover:scale-110')}
             href='/mytasks'
          >
             <p

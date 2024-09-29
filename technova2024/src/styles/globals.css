@@ -68,11 +68,11 @@ body {
 }
 
 .furniture:hover {
-  scale: 130%;
+  scale: 115%;
   transition-timing-function: ease-in-out;
   transition-duration: 100ms;
+  filter: drop-shadow(3px 3px 3px #e5a2ff);
 }
-
 
 * {
   margin: 0;

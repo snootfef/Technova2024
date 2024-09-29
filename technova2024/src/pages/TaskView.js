@@ -1,14 +1,34 @@
-import Image from "next/image"
 import Task from "./Task"
 import { HiPlus } from "react-icons/hi";
+import { useRef, useEffect } from "react";
 
-export default function TaskView({ furniture }) {
+export default function TaskView({ furniture, onClose }) {
+   const modalRef = useRef(null);
+
+   useEffect(() => {
+      const handleClickOutside = (event) => {
+         if (modalRef.current && !modalRef.current.contains(event.target)) {
+            onClose();
+         }
+      };
+
+      document.addEventListener('mousedown', handleClickOutside);
+
+      return () => {
+         document.removeEventListener('mousedown', handleClickOutside);
+      };
+   }, [onClose]);
+
    return (
       <main
-         className="font-sans py-4 flex flex-row bg-white bg-opacity-50 justify-center w-[30vw] h-[60vh] rounded-xl"
+         ref={modalRef}
+         className="ml-8 font-sans py-4 flex flex-row bg-white bg-opacity-50 justify-center w-[30vw] h-[60vh] rounded-xl"
       >
          <div
             className="flex flex-col"
+            onClick={(e) => {
+               e.stopPropagation();
+            }}
          >
             <h2
                className="text-gray-700 font-bold my-2 text-2xl"
@@ -22,7 +42,7 @@ export default function TaskView({ furniture }) {
                <Task taskName={"Make Ice"} />
                <Task />
                <div
-                  className="border-2 flex justify-center items-center relative bg-white bg-opacity-30 w-[13.5vw] h-[16vh] rounded-md border-solid"
+                  className="hover:bg-opacity-50 duration-150 ease-in-out border-2 flex justify-center items-center relative bg-white bg-opacity-30 w-[13.5vw] h-[16vh] rounded-md border-solid"
                >
                   <HiPlus
                      className="text-4xl"
