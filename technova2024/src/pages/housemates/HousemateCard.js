@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function HousemateCard({ name, percentage }) {
+export default function HousemateCard({ name, percentage, avatar }) {
    console.log(name);
 
    return (
@@ -11,9 +11,9 @@ export default function HousemateCard({ name, percentage }) {
             className="w-fit h-[20vh]"
          >
             <Image
-               src="/assets/placeholder.jpg"
+               src={"/assets/" + avatar + ".png"}
                className=''
-               width="70"
+               width="80"
                height="1000"
             />
          </section>
@@ -28,7 +28,7 @@ export default function HousemateCard({ name, percentage }) {
                >
                   {name}
                </h2>
-               {name == "josie" && <p
+               {name == "Josie" && <p
                   className="mx-2 text-gray-100"
                >
                   (you)

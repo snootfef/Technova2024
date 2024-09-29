@@ -65,7 +65,7 @@ const TaskLogger = () => {
                />
                <button
                   type="submit"
-                  className="bg-light-pink text-black rounded-md my-0.5 w-fit text-xs px-1.5 py-0.5 h-fit flex justify-center items-center overflow-hidden"
+                  className="bg-[#4b5fc9] text-white rounded-md my-0.5 w-fit text-xs px-1.5 py-0.5 h-fit flex justify-center items-center overflow-hidden"
                >
                   Save Task
                </button>

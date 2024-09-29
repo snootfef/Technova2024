@@ -71,6 +71,8 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ user_data }) {
+
+   const avatar = ["avatarBlue", "avatarGreen", "avatarRed"];
    return (
       <main className="relative flex flex-col w-screen h-screen no-scrollbar justify-center items-center">
          <Background />
@@ -83,6 +85,7 @@ export default function Home({ user_data }) {
                   key={user._id} // Use a unique identifier for the key
                   name={user.displayName} // Adjust if the property name is different
                   percentage={user.percentage}
+                  avatar={avatar[index % avatar.length]}
                />
             ))}
             <div

@@ -90,8 +90,28 @@ const TaskCard = ({
    drag(drop(ref));
 
    return (
-      <div ref={ref} className="bg-white bg-opacity-50 rounded-md my-2 flex justify-center items-center h-[22vh] w-[27.8vw]" style={{ opacity }}>
-         {name}
+      <div ref={ref} className="bg-white relative bg-opacity-50 rounded-md my-2 flex justify-start items-start h-[20vh] w-[27.8vw]" style={{ opacity }}>
+         <div
+            className="py-6 px-4 flex flex-col text-black font-sans"
+         >
+            <h2
+               className="text-[1.1rem] font-semibold"
+            >
+               {name}
+            </h2>
+            <p
+               className="text-[0.8rem]"
+            >
+               {name == "Wash dishes" ? "Associated with sink" : "Associated with fridge"}
+            </p>
+            <section
+               className="absolute bottom-3 text-[0.8rem] text-gray-700"
+            >
+               <p>
+                  Due October 2
+               </p>
+            </section>
+         </div>
       </div>
    )
 };

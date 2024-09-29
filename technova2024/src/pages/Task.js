@@ -14,7 +14,7 @@ export default function Task({ taskName, assignee, recurrance, deadline, status 
                {taskName}
             </h2>
             <section
-               className="text-xs px-1.5 py-0.5 flex justify-center items-center rounded-md w-fit h-fit bg-light-pink"
+               className="text-white text-xs px-1.5 py-0.5 flex justify-center items-center rounded-md w-fit h-fit bg-[#8c67ca]"
             >
                <p>
                   {status}

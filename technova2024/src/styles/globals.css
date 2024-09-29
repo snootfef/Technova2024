@@ -71,7 +71,7 @@ body {
   scale: 115%;
   transition-timing-function: ease-in-out;
   transition-duration: 100ms;
-  filter: drop-shadow(3px 3px 3px #e5a2ff);
+  filter: drop-shadow(7px 7px 7px #5a73da);
 }
 
 * {
