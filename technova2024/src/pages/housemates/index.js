@@ -86,7 +86,7 @@ export default function Home({ user_data }) {
                />
             ))}
             <div
-               className='hover:scale-[105%] duration-200 ease-in-out border-2 border-opacity-25 relative justify-center items-center font-sans text-white mx-6 p-6 flex flex-col bg-white bg-opacity-30 w-[30vw] h-[35vh] rounded-xl'
+               className='hover:scale-[105%] hover:bg-opacity-50 duration-200 ease-in-out border-2 border-opacity-25 relative justify-center items-center font-sans text-white mx-6 p-6 flex flex-col bg-white bg-opacity-30 w-[30vw] h-[35vh] rounded-xl'
             >
                <HiPlus
                   className='text-4xl'
