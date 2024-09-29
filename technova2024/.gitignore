@@ -38,3 +38,4 @@ next-env.d.ts
 # passwords, usernames, and api-keys
 .env
 /src/pages/api/secret.js
+/src/pages/housemates/secret.js
