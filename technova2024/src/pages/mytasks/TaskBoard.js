@@ -37,15 +37,15 @@ const TaskBoard = ({ children, className, title }) => {
    };
 
    return (
-      <div
+      <main
          ref={drop}
-         className={"taskBoard flex flex-col " + className}
+         className="taskBoard flex flex-col column font-sans"
       >
          <p
-            className='m-4 text-lg'
+            className='px-1.5 py-1 text-md w-fit h-fit bg-light-pink rounded-md'
          >{title}</p>
          {children}
-      </div>
+      </main>
    );
 };
 

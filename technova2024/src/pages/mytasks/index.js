@@ -55,7 +55,7 @@ const Home = () => {
             <Background />
             <Nav />
             <div
-               className='relative flex flex-row'
+               className='relative flex flex-row mx-20 mt-3'
             >
                <TaskBoard title={DO_IT} className="column">
                   {returnItemsForColumn(DO_IT)}
